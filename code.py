@@ -2,16 +2,7 @@
 from csv import reader
 
 def explore_data(dataset, start, end, rows_and_columns=False):
-    """Explore the elements of a list.
-    
-    Print the elements of a list starting from the index 'start'(included) upto the index 'end'         (excluded).
-    
-    Keyword arguments:
-    dataset -- list of which we want to see the elements
-    start -- index of the first element we want to see, this is included
-    end -- index of the stopping element, this is excluded 
-    rows_and_columns -- this parameter is optional while calling the function. It takes binary          values, either True or False. If true, print the dimension of the list, else dont.
-    """
+
     
     
     dataset_slice = dataset[start:end]    
@@ -27,16 +18,6 @@ def explore_data(dataset, start, end, rows_and_columns=False):
 
 
 def duplicate_and_unique_movies(dataset, index_):
-    """Check the duplicate and unique entries.
-    
-    We have nested list. This function checks if the rows in the list is unique or duplicated based     on the element at index 'index_'.
-    It prints the Number of duplicate entries, along with some examples of duplicated entry.
-    
-    Keyword arguments:
-    dataset -- two dimensional list which we want to explore
-    index_ -- column index at which the element in each row would be checked for duplicacy 
-    
-    """
     
     duplicate = []
     unique = []
@@ -56,20 +37,7 @@ def duplicate_and_unique_movies(dataset, index_):
 
 
 def movies_lang(dataset, index_, lang_):
-    """Extract the movies of a particular language.
-    
-    Of all the movies available in all languages, this function extracts all the movies in a            particular laguage.
-    Once you ahve extracted the movies, call the explore_data() to print first few rows.
-    
-    Keyword arguments:
-    dataset -- list containing the details of the movie
-    index_ -- index which is to be compared for langauges
-    lang_ -- desired language for which we want to filter out the movies
-    
-    Returns:
-    movies_ -- list with details of the movies in selected language
-    
-    """
+   
     movies_ = []
 
     for movie in movies:
@@ -84,19 +52,7 @@ def movies_lang(dataset, index_, lang_):
 
 
 def rate_bucket(dataset, rate_low, rate_high):
-    """Extract the movies within the specified ratings.
-    
-    This function extracts all the movies that has rating between rate_low and high_rate.
-    Once you ahve extracted the movies, call the explore_data() to print first few rows.
-    
-    Keyword arguments:
-    dataset -- list containing the details of the movie
-    rate_low -- lower range of rating
-    rate_high -- higher range of rating
-    
-    Returns:
-    rated_movies -- list of the details of the movies with required ratings
-    """
+
 
     rated_movies = []
 
